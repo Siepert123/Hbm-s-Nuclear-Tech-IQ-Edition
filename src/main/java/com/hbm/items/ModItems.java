@@ -258,6 +258,11 @@ public class ModItems {
 
 	public static Item ingot_tt;
 	public static Item ingot_ttas;
+	public static Item ingot_bronze;
+	public static Item ingot_tin;
+	public static Item powder_tin;
+	public static Item tin_can;
+	public static Item tam69;
 
 	@Deprecated public static Item ore_byproduct;
 
@@ -2742,6 +2747,11 @@ public class ModItems {
 		powder_gallium_tiny= new Item().setUnlocalizedName("powder_gallium_tiny").setCreativeTab(MainRegistry.partsTab).setTextureName(RefStrings.MODID + ":powder_gallium_tiny");
 		ingot_tt = new ItemCustomLore().setRarity(EnumRarity.uncommon).setUnlocalizedName("ingot_tt").setCreativeTab(MainRegistry.partsTab).setTextureName(RefStrings.MODID + ":ingot_techtactium");
 		ingot_ttas = new ItemCustomLore().setRarity(EnumRarity.rare).setUnlocalizedName("ingot_ttas").setCreativeTab(MainRegistry.partsTab).setTextureName(RefStrings.MODID + ":ingot_techtactium_as");
+		ingot_bronze = new Item().setUnlocalizedName("ingot_bronze").setCreativeTab(MainRegistry.partsTab).setTextureName(RefStrings.MODID + ":ingot_bronze");
+		ingot_tin = new Item().setUnlocalizedName("ingot_tin").setCreativeTab(MainRegistry.partsTab).setTextureName(RefStrings.MODID + ":ingot_tin");
+		powder_tin = new Item().setUnlocalizedName("powder_tin").setCreativeTab(MainRegistry.partsTab).setTextureName(RefStrings.MODID + ":powder_tin");
+		tin_can = new Item().setUnlocalizedName("tin_can").setCreativeTab(MainRegistry.consumableTab).setTextureName(RefStrings.MODID + ":tin_can");
+		tam69 = new ItemCustomLore().setUnlocalizedName("tam69").setTextureName(RefStrings.MODID + ":tam69");
 		ingot_gaas = new ItemCustomLore().setRarity(EnumRarity.rare).setUnlocalizedName("ingot_gaas").setCreativeTab(MainRegistry.partsTab).setTextureName(RefStrings.MODID + ":ingot_gaas1");
 		nugget_gaas = new Item().setUnlocalizedName("nugget_gaas").setCreativeTab(MainRegistry.partsTab).setTextureName(RefStrings.MODID + ":nugget_gaas");
 		billet_gaas = new Item().setUnlocalizedName("billet_gaas").setCreativeTab(MainRegistry.partsTab).setTextureName(RefStrings.MODID + ":billet_gaas1");
@@ -5044,6 +5054,11 @@ public class ModItems {
 		GameRegistry.registerItem(ingot_gallium, ingot_gallium.getUnlocalizedName());
 		GameRegistry.registerItem(ingot_gaas, ingot_gaas.getUnlocalizedName());
 		GameRegistry.registerItem(ingot_tt, ingot_tt.getUnlocalizedName());
+		GameRegistry.registerItem(ingot_bronze, ingot_bronze.getUnlocalizedName());
+		GameRegistry.registerItem(ingot_tin, ingot_tin.getUnlocalizedName());
+		GameRegistry.registerItem(powder_tin, powder_tin.getUnlocalizedName());
+		GameRegistry.registerItem(tin_can, tin_can.getUnlocalizedName());
+		GameRegistry.registerItem(tam69, tam69.getUnlocalizedName());
 		GameRegistry.registerItem(ingot_ttas, ingot_ttas.getUnlocalizedName());
 		GameRegistry.registerItem(ingot_iridium, ingot_iridium.getUnlocalizedName());
 		GameRegistry.registerItem(ingot_palladium, ingot_palladium.getUnlocalizedName());
