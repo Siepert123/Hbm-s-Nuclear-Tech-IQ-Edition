@@ -176,7 +176,7 @@ public class LogicBlockActions {
 
 				vec.rotateAroundYDeg(36D);
 			}
-			world.setBlock(x, y, z, ModBlocks.block_steel);
+			world.setBlock(x, y, z, tile.disguise != null ? tile.disguise : Blocks.air);
 		}
 	};
 
@@ -295,7 +295,7 @@ public class LogicBlockActions {
 				world.spawnEntityInWorld(mob);
 				vec.rotateAroundYDeg(72D);
 			}
-			world.setBlock(x, y, z, ModBlocks.block_steel);
+			world.setBlock(x, y, z, tile.disguise != null ? tile.disguise : Blocks.air);
 		}
 	};
 
@@ -312,7 +312,7 @@ public class LogicBlockActions {
 				world.spawnEntityInWorld(mob);
 				vec.rotateAroundYDeg(180D);
 			}
-			world.setBlock(x, y, z, ModBlocks.block_steel);
+			world.setBlock(x, y, z, tile.disguise != null ? tile.disguise : Blocks.air);
 		}
 	};
 
@@ -325,7 +325,7 @@ public class LogicBlockActions {
 			EntityTaintCrab mob = new EntityTaintCrab(world);
 			mob.setPositionAndRotation(x + 0.5, world.getHeightValue(x, z), z + 0.5, 0, 0);
 			world.spawnEntityInWorld(mob);
-			world.setBlock(x, y, z, ModBlocks.block_steel);
+			world.setBlock(x, y, z, tile.disguise != null ? tile.disguise : Blocks.air);
 		}
 	};
 
@@ -342,7 +342,7 @@ public class LogicBlockActions {
 				world.spawnEntityInWorld(mob);
 				vec.rotateAroundYDeg(180D);
 			}
-			world.setBlock(x, y, z, ModBlocks.block_steel);
+			world.setBlock(x, y, z, tile.disguise != null ? tile.disguise : Blocks.air);
 		}
 	};
 
