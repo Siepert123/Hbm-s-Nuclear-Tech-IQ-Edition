@@ -789,6 +789,16 @@ public class OreDictManager {
 		OreDictionary.registerOre(KEY_STICK, stick_vinyl);
 		OreDictionary.registerOre(KEY_STICK, stick_pvc);
 
+		// le son
+		OreDictionary.registerOre(MaterialShapes.DUST.name() + Mats.MAT_CONCRETE.names[0], ModItems.quikrete_concrete);
+		OreDictionary.registerOre(MaterialShapes.DUST.name() + Mats.MAT_REINFORCED_CONCRETE.names[0], ModItems.quikrete_reinforced_concrete);
+		OreDictionary.registerOre(MaterialShapes.DUST.name() + Mats.MAT_DURCRETE.names[0], ModItems.quikrete_ducrete);
+		OreDictionary.registerOre(MaterialShapes.DUST.name() + Mats.MAT_REINFORCED_DURCRETE.names[0], ModItems.quikrete_reinforced_ducrete);
+		OreDictionary.registerOre(MaterialShapes.DUST.name() + Mats.MAT_LIMESTONE.names[0], ModItems.quikrete_limestone);
+		OreDictionary.registerOre(MaterialShapes.DUST.name() + Mats.MAT_NETHERRACK.names[0], ModItems.quikrete_netherrack);
+		OreDictionary.registerOre(MaterialShapes.DUST.name() + Mats.MAT_DEPTHROCK.names[0], ModItems.quikrete_depthrock);
+		OreDictionary.registerOre(MaterialShapes.DUST.name() + Mats.MAT_NETHER_DEPTHROCK.names[0], ModItems.quikrete_nether_depthrock);
+
 		for(NTMMaterial mat : Mats.orderedList) {
 			if(mat.autogen.contains(MaterialShapes.FRAGMENT)) {
 				String name = mat.names[0];
