@@ -192,6 +192,7 @@ public class ShredderRecipes extends SerializableRecipe {
 		ShredderRecipes.setRecipe(ModItems.fragment_actinium, new ItemStack(ModItems.powder_actinium_tiny, 1));
 		ShredderRecipes.setRecipe(ModItems.fragment_boron, new ItemStack(ModItems.powder_boron_tiny, 1));
 		ShredderRecipes.setRecipe(ModItems.fragment_meteorite, new ItemStack(ModItems.powder_meteorite_tiny, 1));
+		ShredderRecipes.setRecipe(ModBlocks.tin_sand, new ItemStack(ModItems.powder_tin_tiny, 3));
 		ShredderRecipes.setRecipe(ModBlocks.block_meteor, new ItemStack(ModItems.powder_meteorite, 10));
 		ShredderRecipes.setRecipe(Items.enchanted_book, new ItemStack(ModItems.powder_magic, 1));
 		ShredderRecipes.setRecipe(ModBlocks.meteor_polished, new ItemStack(ModItems.powder_meteorite, 1));
@@ -250,7 +251,7 @@ public class ShredderRecipes extends SerializableRecipe {
 		for(ItemStack cobble : cobbles) ShredderRecipes.setRecipe(cobble, new ItemStack(Blocks.gravel, 1));
 		for(ItemStack sand : sands) ShredderRecipes.setRecipe(sand, new ItemStack(ModItems.dust, 2));
 		for(ItemStack dust : lapis) ShredderRecipes.setRecipe(dust, new ItemStack(ModItems.powder_cobalt_tiny, 1));
-		
+
 		for(EnumBedrockOre ore : EnumBedrockOre.values()) {
 			int i = ore.ordinal();
 			ShredderRecipes.setRecipe(new ItemStack(ModItems.ore_bedrock, 1, i), new ItemStack(ModItems.ore_enriched, 1, i));
