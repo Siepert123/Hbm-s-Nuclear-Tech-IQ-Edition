@@ -35,6 +35,15 @@ public class GUIHandler implements IGuiHandler {
 		
 		ItemStack item = player.getHeldItem();
 		if(item != null && item.getItem() instanceof IGUIProvider) return ((IGUIProvider) item.getItem());
+
+		for(int i = 0; i < 4; i++) {
+			ItemStack armor = player.inventory.armorInventory[i];
+			if(armor == null || !ArmorModHandler.hasMods(armor)) continue;
+
+			for(ItemStack mod : ArmorModHandler.pryMods(armor)) {
+				if(mod != null && mod.getItem() instanceof IGUIProvider) return (IGUIProvider) mod.getItem();
+			}
+		}
 		
 		Entity entity = player.worldObj.getEntityByID(x);
 		if(entity != null && entity instanceof IGUIProvider) return ((IGUIProvider) entity);

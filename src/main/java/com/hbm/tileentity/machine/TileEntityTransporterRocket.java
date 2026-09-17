@@ -84,6 +84,9 @@ public class TileEntityTransporterRocket extends TileEntityTransporterBase {
 		Target from = CelestialBody.getTarget(worldObj, xCoord, zCoord);
 		Target to = CelestialBody.getTarget(linkedTransporter.getWorldObj(), linkedTransporter.xCoord, linkedTransporter.zCoord);
 
+		// nor land on the planet until the cloud is cleared
+		if("dross".equals(from.body.name) || "dross".equals(to.body.name)) return false;
+
 		int sendCost = Math.min(64_000, SolarSystem.getCostBetween(from.body, to.body, mass * MASS_MULT, (int)fuelStats.getThrust(), fuelStats.getISP(), from.inOrbit, to.inOrbit));
 
 		return tanks[8].getFill() >= sendCost && tanks[9].getFill() >= sendCost;
