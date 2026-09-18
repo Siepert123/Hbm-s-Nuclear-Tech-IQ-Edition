@@ -45,6 +45,7 @@ public class LiquefactionRecipes extends SerializableRecipe {
 		recipes.put(PB.ingot(),											new FluidStack(100, Fluids.LEAD));
 		recipes.put(PB.dust(),											new FluidStack(100, Fluids.LEAD));
 		recipes.put(PB.block(),											new FluidStack(900, Fluids.LEAD));
+		recipes.put(SOLDERALLOY.ingot(),								new FluidStack(1000, Fluids.SOLDERING_ALLOY));
 		//general utility recipes because why not
 		recipes.put(new ComparableStack(Blocks.netherrack),				new FluidStack(250, Fluids.LAVA));
 		recipes.put(KEY_COBBLESTONE,									new FluidStack(250, Fluids.LAVA));

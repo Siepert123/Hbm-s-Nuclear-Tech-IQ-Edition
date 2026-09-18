@@ -38,6 +38,12 @@ public class ArcWelderRecipes extends SerializableRecipe {
 		//Parts
 		recipes.add(new ArcWelderRecipe(new ItemStack(ModItems.motor, 2), 100, 400L,
 				new OreDictStack(STEEL.plate(), 2), new OreDictStack(MINGRADE.wireDense(), 2)));
+		recipes.add(new ArcWelderRecipe(new ItemStack(ModItems.motor, 4), 100, 400L, new FluidStack(Fluids.SOLDERING_ALLOY, 500),
+				new OreDictStack(STEEL.plate(), 2), new OreDictStack(MINGRADE.wireDense(), 2)));
+		recipes.add(new ArcWelderRecipe(new ItemStack(ModItems.coil_copper, 2), 100, 400L, new FluidStack(Fluids.SOLDERING_ALLOY, 500),
+				new OreDictStack(MINGRADE.wireDense(), 1), new OreDictStack(IRON.ingot(), 1)));
+		recipes.add(new ArcWelderRecipe(new ItemStack(ModItems.coil_copper, 4), 100, 400L, new FluidStack(Fluids.SOLDERING_ALLOY, 500),
+			new OreDictStack(MINGRADE.wireDense(), 1), new OreDictStack(STEEL.ingot(), 1)));
 		recipes.add(new ArcWelderRecipe(DictFrame.fromOne(ModItems.part_generic, EnumPartType.LDE), 200, 5_000L,
 				new OreDictStack(AL.plate(), 4), new OreDictStack(FIBER.ingot(), 4), new OreDictStack(ANY_HARDPLASTIC.ingot())));
 		recipes.add(new ArcWelderRecipe(DictFrame.fromOne(ModItems.part_generic, EnumPartType.LDE), 200, 10_000L,

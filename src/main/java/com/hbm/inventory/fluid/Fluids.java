@@ -97,6 +97,7 @@ public class Fluids {
 	public static FluidType NITAN;
 	public static FluidType UF6;
 	public static FluidType PUF6;
+	public static FluidType SOLDERING_ALLOY;
 	public static FluidType HUMAN_BLOOD;
 	public static FluidType ANTISERUM;
 	public static FluidType SAS3;
@@ -561,6 +562,7 @@ public class Fluids {
 		CMILK =					new FluidType("CMILK",				0xCFCFCF, 0, 0, 0, EnumSymbol.NONE).addTraits(new FT_Consumable().setClearsEffects(true), LIQUID);//F5DEE4
 		CREAM =					new FluidType("CREAM",				0xCFCFCF, 0, 0, 0, EnumSymbol.NONE).addTraits(new FT_Consumable(), LIQUID);//F5DEE4
 		MAGMA =					new FluidType("MAGMA",				0xFF3300, 3, 3, 3, EnumSymbol.NONE).addTraits(LIQUID, VISCOUS);
+		SOLDERING_ALLOY =		new FluidType("SOLDERING_ALLOY",	0x999999, 2, 0, 0, EnumSymbol.NONE).addTraits(LIQUID);
 		DICYANOACETYLENE =		new FluidType("DICYANOACETYLENE",	0x675A9F, 1, 2, 1, EnumSymbol.NONE).addTraits(new FT_Flammable(4_000_000), GASEOUS);
 		BRINE =					new FluidType("BRINE",				0xD1A73E, 3, 3, 3, EnumSymbol.NONE).addTraits(LIQUID, VISCOUS);
 		CONGLOMERA =			new FluidType("CONGLOMERA",			0x364D47, 0, 0, 2, EnumSymbol.NONE).addTraits(LIQUID, VISCOUS);
@@ -1024,6 +1026,7 @@ public class Fluids {
 		metaOrder.add(GANJA);
 		metaOrder.add(CONSTRUCTION_FOAM);
 		metaOrder.add(STALEAIR);
+		metaOrder.add(SOLDERING_ALLOY);
 
 		//ANY INTERNAL RENAMING MUST BE REFLECTED HERE - DON'T FORGET TO CHANGE: LANG FILES + TYPE'S STRING ID + NAME OF TANK/GUI TEXTURE FILES!
 		// V

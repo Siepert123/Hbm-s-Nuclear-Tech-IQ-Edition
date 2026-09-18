@@ -50,6 +50,7 @@ public class ItemCircuit extends ItemEnumMulti {
 		list.add(new ItemStack(item, 1, EnumCircuitType.GASCHIP.ordinal()));
 		list.add(new ItemStack(item, 1, EnumCircuitType.HFCHIP.ordinal()));
 		list.add(new ItemStack(item, 1, EnumCircuitType.MOLYCHIP.ordinal()));
+		list.add(new ItemStack(item, 1, EnumCircuitType.PHARMACEUTICAL.ordinal()));
 	}
 
 	public static enum EnumCircuitType {
@@ -83,6 +84,7 @@ public class ItemCircuit extends ItemEnumMulti {
 		HFCHIP,
 		MOLYCHIP,
 		NUMITRON,
+		PHARMACEUTICAL,
 	}
 
 	@Override

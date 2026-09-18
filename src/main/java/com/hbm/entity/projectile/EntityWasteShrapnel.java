@@ -11,6 +11,11 @@ import net.minecraft.world.World;
 
 public class EntityWasteShrapnel extends EntityShrapnel {
 
+	public EntityWasteShrapnel(World world) {
+		super(world);
+		this.setRenderScale(2.0F);
+	}
+
 	public EntityWasteShrapnel(World world, double x, double y, double z) {
 		super(world, x, y, z);
 		this.setRenderScale(2.0F);

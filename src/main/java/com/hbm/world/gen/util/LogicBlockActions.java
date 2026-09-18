@@ -60,7 +60,7 @@ public class LogicBlockActions {
 
 					EntityUndeadSoldier mob = new EntityUndeadSoldier(world);
 					for (int j = 0; j < 7; j++) {
-						mob.setPositionAndRotation(x + 0.5 + vec.xCoord, world.getHeightValue((int) (x + 0.5 + vec.xCoord),(int) (z + 0.5 + vec.zCoord)), z + 0.5 + vec.zCoord, i * 36F, 0);
+						mob.setPositionAndRotation(x + 0.5 + vec.xCoord, y + 1, z + 0.5 + vec.zCoord, i * 36F, 0);
 						if (mob.getCanSpawnHere()) {
 							mob.onSpawnWithEgg(null);
 							if(tile.player != null){
@@ -169,7 +169,7 @@ public class LogicBlockActions {
 			Vec3NT vec = new Vec3NT(5, 0, 0);
 			for (int i = 0; i < 10; i++) {
 				EntityZombie mob = new EntityZombie(world);
-				mob.setPositionAndRotation(x + 0.5 + vec.xCoord, world.getHeightValue(x,z), z + 0.5 + vec.zCoord, i * 36F, 0);
+				mob.setPositionAndRotation(x + 0.5 + vec.xCoord, y + 1, z + 0.5 + vec.zCoord, i * 36F, 0);
 				MobUtil.assignItemsToEntity(mob, MobUtil.slotPoolAdv, new Random());
 				if(world.rand.nextInt(4) == 0) mob.addPotionEffect(new PotionEffect(Potion.moveSpeed.id, 600, 0));
 				world.spawnEntityInWorld(mob);
@@ -291,7 +291,7 @@ public class LogicBlockActions {
 			Vec3NT vec = new Vec3NT(3, 0, 0);
 			for (int i = 0; i < 5; i++) {
 				EntityCyberCrab mob = new EntityCyberCrab(world);
-				mob.setPositionAndRotation(x + 0.5 + vec.xCoord, world.getHeightValue(x, z), z + 0.5 + vec.zCoord, i * 72F, 0);
+				mob.setPositionAndRotation(x + 0.5 + vec.xCoord, y + 1, z + 0.5 + vec.zCoord, i * 72F, 0);
 				world.spawnEntityInWorld(mob);
 				vec.rotateAroundYDeg(72D);
 			}
@@ -308,7 +308,7 @@ public class LogicBlockActions {
 			Vec3NT vec = new Vec3NT(3, 0, 0);
 			for (int i = 0; i < 2; i++) {
 				EntityTeslaCrab mob = new EntityTeslaCrab(world);
-				mob.setPositionAndRotation(x + 0.5 + vec.xCoord, world.getHeightValue(x, z), z + 0.5 + vec.zCoord, i * 180F, 0);
+				mob.setPositionAndRotation(x + 0.5 + vec.xCoord, y + 1, z + 0.5 + vec.zCoord, i * 180F, 0);
 				world.spawnEntityInWorld(mob);
 				vec.rotateAroundYDeg(180D);
 			}
@@ -323,7 +323,7 @@ public class LogicBlockActions {
 		int z = tile.zCoord;
 		if (tile.phase == 1) {
 			EntityTaintCrab mob = new EntityTaintCrab(world);
-			mob.setPositionAndRotation(x + 0.5, world.getHeightValue(x, z), z + 0.5, 0, 0);
+			mob.setPositionAndRotation(x + 0.5, y + 1, z + 0.5, 0, 0);
 			world.spawnEntityInWorld(mob);
 			world.setBlock(x, y, z, tile.disguise != null ? tile.disguise : Blocks.air);
 		}
@@ -338,7 +338,7 @@ public class LogicBlockActions {
 			Vec3NT vec = new Vec3NT(3, 0, 0);
 			for (int i = 0; i < 2; i++) {
 				EntityCreeperPhosgene mob = new EntityCreeperPhosgene(world);
-				mob.setPositionAndRotation(x + 0.5 + vec.xCoord, world.getHeightValue(x, z), z + 0.5 + vec.zCoord, i * 180F, 0);
+				mob.setPositionAndRotation(x + 0.5 + vec.xCoord, y + 1, z + 0.5 + vec.zCoord, i * 180F, 0);
 				world.spawnEntityInWorld(mob);
 				vec.rotateAroundYDeg(180D);
 			}

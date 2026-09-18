@@ -5,12 +5,11 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 
-//i love you
+//i love you, tam.
 import static com.hbm.items.ModItems.*;
 import static com.hbm.blocks.ModBlocks.*;
 import static com.hbm.inventory.OreDictManager.DictFrame.*;
 import static com.hbm.inventory.material.MaterialShapes.*;
-//oh yeha well i HATE you ahahah im evil
 
 import com.hbm.blocks.ModBlocks;
 import com.hbm.blocks.generic.BlockOreBasalt.EnumBasaltOreType;
@@ -242,6 +241,7 @@ public class OreDictManager {
 	public static final DictFrame DESH = new DictFrame("Desh");
 	public static final DictFrame STAR = new DictFrame("Starmetal");
 	public static final DictFrame GUNMETAL = new DictFrame("GunMetal");
+	public static final DictFrame SOLDERALLOY = new DictFrame("SolderingAlloy");
 	public static final DictFrame WEAPONSTEEL = new DictFrame("WeaponSteel");
 	public static final DictFrame BIGMT = new DictFrame("Saturnite");
 	public static final DictFrame FERRO = new DictFrame("Ferrouranium");
@@ -1267,7 +1267,6 @@ public class OreDictManager {
 
 		/**
 		 * Will add a reregistration entry for every mat name of every added DictFrame for the given prefix
-		 * @param prefix The prefix of both the input and result of the reregistration
 		 * @return
 		 */
 		public DictGroup addPrefix(MaterialShapes shape, boolean inputPrefix) {
