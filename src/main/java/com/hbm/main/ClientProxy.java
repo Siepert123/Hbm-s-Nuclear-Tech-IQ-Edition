@@ -308,6 +308,7 @@ public class ClientProxy extends ServerProxy {
 		ClientRegistry.bindTileEntitySpecialRenderer(TileEntityMachineChemicalFactory.class, new RenderChemicalFactory());
 		ClientRegistry.bindTileEntitySpecialRenderer(TileEntityMachinePUREX.class, new RenderPUREX());
 		ClientRegistry.bindTileEntitySpecialRenderer(TileEntityMachineHaemodialysis.class, new RenderHaemodialysis());
+		ClientRegistry.bindTileEntitySpecialRenderer(TileEntityMachineMagneticSeparator.class, new RenderMagneticSeparator());
 		ClientRegistry.bindTileEntitySpecialRenderer(TileEntityMachineFluidTank.class, new RenderFluidTank());
 		ClientRegistry.bindTileEntitySpecialRenderer(TileEntityMachineBAT9000.class, new RenderBAT9000());
 		ClientRegistry.bindTileEntitySpecialRenderer(TileEntityMachineBigAssTank.class, new RenderBigAssTank());

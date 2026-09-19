@@ -406,6 +406,7 @@ public class TileMappings {
 		put(TileEntityMachineChemicalFactory.class, "tileentity_chemicalfactory");
 		put(TileEntityMachinePUREX.class, "tileentity_purex");
 		put(TileEntityMachineHaemodialysis.class, "tileentity_haemodialysis");
+		put(TileEntityMachineMagneticSeparator.class, "tileentity_magnetic_separator");
 
 		put(TileEntityMachineOilWell.class, "tileentity_derrick");
 		put(TileEntityMachinePumpjack.class, "tileentity_machine_pumpjack");

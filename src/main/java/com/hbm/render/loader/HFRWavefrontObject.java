@@ -291,8 +291,6 @@ public class HFRWavefrontObject implements IModelCustomNamed {
 			} catch(NumberFormatException e) {
 				throw new ModelFormatException(String.format("Number formatting error at line %d", lineCount), e);
 			}
-		} else {
-			throw new ModelFormatException("Error parsing entry ('" + line + "'" + ", line " + lineCount + ") in file '" + fileName + "' - Incorrect format");
 		}
 
 		
@@ -312,8 +310,6 @@ public class HFRWavefrontObject implements IModelCustomNamed {
 			} catch(NumberFormatException e) {
 				throw new ModelFormatException(String.format("Number formatting error at line %d", lineCount), e);
 			}
-		} else {
-			throw new ModelFormatException("Error parsing entry ('" + line + "'" + ", line " + lineCount + ") in file '" + fileName + "' - Incorrect format");
 		}
 
 		return vertexNormal;

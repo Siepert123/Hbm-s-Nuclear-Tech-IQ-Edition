@@ -27,6 +27,8 @@ public abstract class ModuleMachineBase {
 	// running vars
 	protected String recipe = "null";
 	public double progress;
+	/** Number of recipes processed simultaneously, scaling input, output and power */
+	public int parallels = 1;
 	// return signals
 	public boolean didProcess = false;
 	public boolean markDirty = false;
@@ -76,12 +78,13 @@ public abstract class ModuleMachineBase {
 		if(recipe.inputItem != null) {
 			for(int i = 0; i < Math.min(recipe.inputItem.length, inputSlots.length); i++) {
 				if(!recipe.inputItem[i].matchesRecipe(slots[inputSlots[i]], false)) return false;
+				if(slots[inputSlots[i]].stackSize < recipe.inputItem[i].stacksize * this.parallels) return false;
 			}
 		}
 		
 		if(recipe.inputFluid != null) {
 			for(int i = 0; i < Math.min(recipe.inputFluid.length, inputTanks.length); i++) {
-				if(inputTanks[i].getFill() < recipe.inputFluid[i].fill) return false;
+				if(inputTanks[i].getFill() < recipe.inputFluid[i].fill * this.parallels) return false;
 			}
 		}
 		
@@ -101,13 +104,13 @@ public abstract class ModuleMachineBase {
 				if(single == null) return false; // shouldn't be possible but better safe than sorry
 				if(stack.getItem() != single.getItem()) return false;
 				if(stack.getItemDamage() != single.getItemDamage()) return false;
-				if(stack.stackSize + single.stackSize > stack.getMaxStackSize()) return false;
+				if(stack.stackSize + single.stackSize * this.parallels > stack.getMaxStackSize()) return false;
 			}
 		}
 		
 		if(recipe.outputFluid != null) {
 			for(int i = 0; i < Math.min(recipe.outputFluid.length, outputTanks.length); i++) {
-				if(recipe.outputFluid[i].fill + outputTanks[i].getFill() > outputTanks[i].getMaxFill()) return false;
+				if(recipe.outputFluid[i].fill * this.parallels + outputTanks[i].getFill() > outputTanks[i].getMaxFill()) return false;
 			}
 		}
 		
@@ -135,14 +138,14 @@ public abstract class ModuleMachineBase {
 		
 		if(recipe.inputItem != null) {
 			for(int i = 0; i < Math.min(recipe.inputItem.length, inputSlots.length); i++) {
-				slots[inputSlots[i]].stackSize -= recipe.inputItem[i].stacksize;
+				slots[inputSlots[i]].stackSize -= recipe.inputItem[i].stacksize * this.parallels;
 				if(slots[inputSlots[i]].stackSize <= 0) slots[inputSlots[i]] = null;
 			}
 		}
 		
 		if(recipe.inputFluid != null) {
 			for(int i = 0; i < Math.min(recipe.inputFluid.length, inputTanks.length); i++) {
-				inputTanks[i].setFill(inputTanks[i].getFill() - recipe.inputFluid[i].fill);
+				inputTanks[i].setFill(inputTanks[i].getFill() - recipe.inputFluid[i].fill * this.parallels);
 			}
 		}
 	}
@@ -152,18 +155,21 @@ public abstract class ModuleMachineBase {
 		
 		if(recipe.outputItem != null) {
 			for(int i = 0; i < Math.min(recipe.outputItem.length, outputSlots.length); i++) {
-				ItemStack collapse = recipe.outputItem[i].collapse();
-				if(slots[outputSlots[i]] == null) {
-					slots[outputSlots[i]] = collapse;
-				} else {
-					if(collapse != null) slots[outputSlots[i]].stackSize += collapse.stackSize; // we can do this because we've already established that the result slot is not null if it's a single output
+				for(int p = 0; p < this.parallels; p++) {
+					ItemStack collapse = recipe.outputItem[i].collapse();
+					if(collapse == null) continue;
+					if(slots[outputSlots[i]] == null) {
+						slots[outputSlots[i]] = collapse;
+					} else if(ItemStack.areItemStackTagsEqual(slots[outputSlots[i]], collapse)) {
+						slots[outputSlots[i]].stackSize += collapse.stackSize; // we can do this because we've already established that the result slot is not null if it's a single output
+					}
 				}
 			}
 		}
 		
 		if(recipe.outputFluid != null) {
 			for(int i = 0; i < Math.min(recipe.outputFluid.length, outputTanks.length); i++) {
-				outputTanks[i].setFill(outputTanks[i].getFill() + recipe.outputFluid[i].fill);
+				outputTanks[i].setFill(outputTanks[i].getFill() + recipe.outputFluid[i].fill * this.parallels);
 			}
 		}
 		

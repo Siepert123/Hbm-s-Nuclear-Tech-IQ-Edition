@@ -1151,6 +1151,7 @@ public class ModBlocks {
 	public static Block machine_purex;
 	public static Block machine_mixer;
 	public static Block machine_haemodialysis;
+	public static Block machine_magnetic_separator;
 
 	public static Block machine_fluidtank;
 	@Deprecated public static Block machine_bat9000;
@@ -2597,6 +2598,7 @@ public class ModBlocks {
 		machine_purex = new MachinePUREX(Material.iron).setBlockName("machine_purex").setHardness(5.0F).setResistance(30.0F).setCreativeTab(MainRegistry.machineTab).setBlockTextureName(RefStrings.MODID + ":block_steel");
 		machine_mixer = new MachineMixer(Material.iron).setBlockName("machine_mixer").setHardness(5.0F).setResistance(30.0F).setCreativeTab(MainRegistry.machineTab).setBlockTextureName(RefStrings.MODID + ":block_steel");
 		machine_haemodialysis = new MachineHaemodialysis(Material.iron).setBlockName("machine_haemodialysis").setHardness(5.0F).setResistance(30.0F).setCreativeTab(MainRegistry.machineTab).setBlockTextureName(RefStrings.MODID + ":block_steel");
+		machine_magnetic_separator = new MachineMagneticSeparator(Material.iron).setBlockName("machine_magnetic_separator").setHardness(5.0F).setResistance(30.0F).setCreativeTab(MainRegistry.machineTab).setBlockTextureName(RefStrings.MODID + ":block_steel");
 		machine_fluidtank = new MachineFluidTank(Material.iron).setBlockName("machine_fluidtank").setHardness(5.0F).setResistance(20.0F).setCreativeTab(MainRegistry.machineTab).setBlockTextureName(RefStrings.MODID + ":block_steel");
 		machine_bat9000 = new MachineBigAssTank9000(Material.iron).setBlockName("machine_bat9000").setHardness(5.0F).setResistance(10.0F).setCreativeTab(MainRegistry.machineTab).setBlockTextureName(RefStrings.MODID + ":block_steel");
 		machine_bigasstank = new MachineBigAssTank().setBlockName("machine_bigasstank").setHardness(5.0F).setResistance(10.0F).setCreativeTab(MainRegistry.machineTab).setBlockTextureName(RefStrings.MODID + ":block_steel");
@@ -3873,6 +3875,7 @@ public class ModBlocks {
 		register(machine_chemical_factory);
 		register(machine_purex);
 		register(machine_haemodialysis);
+		register(machine_magnetic_separator);
 		register(machine_arc_welder);
 		register(machine_soldering_station);
 		register(machine_vacuum_circuit);

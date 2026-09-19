@@ -173,6 +173,7 @@ public class ResourceManager {
 	//Mixer
 	public static final IModelCustom mixer = new HFRWavefrontObject(new ResourceLocation(RefStrings.MODID, "models/machines/mixer.obj")).asVBO();
 	public static final IModelCustom haemodialysis_machine = new HFRWavefrontObject(new ResourceLocation(RefStrings.MODID, "models/machines/haemodialysis_machine.obj")).asVBO();
+	public static final IModelCustom magnetic_separator = new HFRWavefrontObject(new ResourceLocation(RefStrings.MODID, "models/machines/magnetic_separator.obj")).asVBO();
 
 	//Arc Welder
 	public static final IModelCustom arc_welder = new HFRWavefrontObject(new ResourceLocation(RefStrings.MODID, "models/machines/arc_welder.obj")).noSmooth().asVBO();
@@ -709,6 +710,7 @@ public class ResourceManager {
 	//Mixer
 	public static final ResourceLocation mixer_tex = new ResourceLocation(RefStrings.MODID, "textures/models/machines/mixer.png");
 	public static final ResourceLocation haemodialysis_machine_tex = new ResourceLocation(RefStrings.MODID, "textures/models/machines/haemodialysis_machine.png");
+	public static final ResourceLocation magnetic_separator_tex = new ResourceLocation(RefStrings.MODID, "textures/models/machines/magnetic_separator.png");
 
 	//Welder
 	public static final ResourceLocation arc_welder_tex = new ResourceLocation(RefStrings.MODID, "textures/models/machines/arc_welder.png");
