@@ -629,18 +629,16 @@ public class PUREXRecipes extends GenericRecipes<PUREXRecipe> {
 			.setGroup(autoBuurmium, this)
 			.inputItems(new ComparableStack(ModItems.rbmk_pellet_dbm, 1, 4))
 			.inputFluids(new FluidStack(Fluids.BUURMIC_ACID, 250), new FluidStack(Fluids.SOLVENT, 2000))
-			.outputItems(new ItemStack(ModItems.powder_pure_buurmium_tiny, 2),
-				new ItemStack(ModItems.buurmic_waste_tiny, 2),
-				new ItemStack(ModItems.nuclear_waste_tiny, 2))
+			.outputItems(new ItemStack(ModItems.powder_pure_buurmium_tiny, 4),
+				new ItemStack(ModItems.buurmic_waste_tiny, 2))
 			.setIconToFirstIngredient()
 		);
 		this.register((PUREXRecipe) new PUREXRecipe("purex.dbm_xenon").setup(200, zirnoxPower).setNameWrapper("purex.recycle")
 			.setGroup(autoBuurmium, this)
 			.inputItems(new ComparableStack(ModItems.rbmk_pellet_dbm, 1, 9))
 			.inputFluids(new FluidStack(Fluids.BUURMIC_ACID, 250), new FluidStack(Fluids.SOLVENT, 2000))
-			.outputItems(new ItemStack(ModItems.powder_pure_buurmium_tiny, 2),
-				new ItemStack(ModItems.buurmic_waste_tiny, 1),
-				new ItemStack(ModItems.nuclear_waste_tiny, 2),
+			.outputItems(new ItemStack(ModItems.powder_pure_buurmium_tiny, 3),
+				new ItemStack(ModItems.buurmic_waste_tiny, 2),
 				new ItemStack(ModItems.powder_xe135_tiny, 1))
 			.setIconToFirstIngredient()
 		);
